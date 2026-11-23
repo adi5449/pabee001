@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pabee | All-in-One Restaurant &amp; Bar Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#0e0e0f;--bg2:#161617;--ink:#f6f2f0;--mut:#a9a2a0;--red:#e11d2e;--red2:#ff4d5a;--card:#1b1b1d;--line:#2c2a2b;--dark:#000;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0e0f;--bg2:#161617;--ink:#f6f2f0;--mut:#a9a2a0;--card:#1b1b1d;--line:#2c2a2b;--dark:#000}}
+:root[data-theme="dark"]{--bg:#0e0e0f;--bg2:#161617;--ink:#f6f2f0;--mut:#a9a2a0;--card:#1b1b1d;--line:#2c2a2b;--dark:#000}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.55;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:19;background:var(--bg)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.5px}.logo b{color:var(--red)}
+.links{display:flex;gap:26px;font-size:14px;font-weight:500;color:var(--mut)}
+.links a:hover{color:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;padding:12px 22px;border-radius:999px;font-weight:700;font-size:15px;border:0;cursor:pointer;box-shadow:0 8px 24px -8px var(--red);transition:.2s}
+.btn:hover{transform:translateY(-2px);background:#c8101f}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);box-shadow:none}
+.btn.ghost:hover{border-color:var(--red);color:var(--red);background:transparent}
+.hero{position:relative;padding:72px 0 56px;background:radial-gradient(60% 50% at 80% 0%,color-mix(in srgb,var(--red) 18%,transparent),transparent),var(--bg)}
+.grid2{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.pill{display:inline-block;background:color-mix(in srgb,var(--red) 12%,transparent);color:var(--red);font-weight:700;font-size:13px;padding:6px 14px;border-radius:999px;margin-bottom:18px}
+h1{font-size:clamp(34px,5.4vw,58px);line-height:1.05;letter-spacing:-1.8px;font-weight:800}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--red),var(--red2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--mut);font-size:18px;margin:20px 0 28px;max-width:520px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:22px;margin-top:30px;color:var(--mut);font-size:13px;font-weight:500;flex-wrap:wrap}
+.trust span::before{content:"✓ ";color:var(--red);font-weight:800}
+.mock{position:relative;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:0 40px 80px -30px rgba(225,29,46,.35)}
+@keyframes float{50%{transform:translateY(-10px)}}
+.bar{display:flex;gap:6px;margin-bottom:12px}.bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}.bar i:first-child{background:var(--red)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.kpi{background:var(--bg2);border-radius:14px;padding:12px}.kpi small{color:var(--mut);font-size:11px}.kpi b{display:block;font-size:20px}
+.kpi b.up{color:#16a34a}
+.chart{margin:12px 0;background:var(--bg2);border-radius:14px;padding:10px}
+.tickets{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tk{border-radius:12px;padding:10px;font-size:12px;border:1px dashed var(--line)}
+.tk b{display:block;font-size:13px}.tk.n{border-color:var(--red);background:color-mix(in srgb,var(--red) 8%,transparent)}
+.chip{position:absolute;background:#232326;border:1px solid var(--line);color:#fff;font-size:12px;font-weight:700;padding:9px 14px;border-radius:12px;box-shadow:0 12px 30px -8px rgba(0,0,0,.5)}
+.c1{left:-22px;top:46%}.c2{right:-14px;bottom:-16px;background:var(--red)}
+section{padding:80px 0}
+.alt{background:var(--bg2)}
+.eyebrow{color:var(--red);font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+h2{font-size:clamp(28px,4vw,42px);letter-spacing:-1.2px;line-height:1.1;margin:10px 0 14px;font-weight:800}
+.sub{color:var(--mut);max-width:600px}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.f{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;transition:.25s}
+.f:hover{transform:translateY(-6px);border-color:var(--red);box-shadow:0 24px 40px -24px rgba(225,29,46,.45)}
+.ic{width:48px;height:48px;border-radius:14px;background:color-mix(in srgb,var(--red) 12%,transparent);display:grid;place-items:center;font-size:24px;margin-bottom:16px}
+.f h3{font-size:18px;margin-bottom:6px}.f p{color:var(--mut);font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px;counter-reset:s}
+.st{position:relative;padding:24px;border-radius:20px;background:var(--card);border:1px solid var(--line)}
+.st::before{counter-increment:s;content:"0" counter(s);font-size:38px;font-weight:800;color:var(--red);opacity:.9;display:block;margin-bottom:6px}
+.st p{color:var(--mut);font-size:14px}
+.stats{border:1px solid var(--line);background:var(--dark);color:#fff;border-radius:28px;padding:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;background-image:radial-gradient(60% 120% at 100% 0,rgba(225,29,46,.45),transparent)}
+.stats b{font-size:40px;display:block;letter-spacing:-1px}.stats span{color:#cfc8c6;font-size:14px}
+.seg{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.seg span{padding:10px 18px;border-radius:999px;border:1.5px solid var(--line);font-weight:600;font-size:14px;background:var(--card)}
+.seg span:hover{border-color:var(--red);color:var(--red)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px}
+.person{display:flex;gap:14px;align-items:center;margin:22px 0}
+.av{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--red2));color:#fff;display:grid;place-items:center;font-weight:800;font-size:20px}
+.phone{font-size:26px;font-weight:800;letter-spacing:-.5px}
+form{display:grid;gap:12px}
+input,select,textarea{width:100%;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-size:15px}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--red);box-shadow:0 0 0 4px color-mix(in srgb,var(--red) 15%,transparent)}
+.note{font-size:12px;color:var(--mut)}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mut);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:26px;box-shadow:0 10px 30px -6px rgba(37,211,102,.7)}
+.i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.ic .i{width:24px;height:24px;stroke:var(--red)}
+.ic{border-radius:12px;border:1px solid color-mix(in srgb,var(--red) 25%,transparent)}
+.pill{display:inline-flex;align-items:center;gap:8px}.pill .i{width:15px;height:15px}
+.seg span{display:inline-flex;align-items:center;gap:8px}.seg .i{width:17px;height:17px;stroke:var(--red)}
+.chip{display:flex;align-items:center;gap:8px}.chip .i{width:15px;height:15px}
+.wa .i{width:26px;height:26px}
+.rv{opacity:0;transform:translateY(24px);transition:.7s}.rv.in{opacity:1;transform:none}
+@media(max-width:900px){.grid2,.contact{grid-template-columns:1fr}.feats{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.links{display:none}.c1{left:-6px}.c2{right:-6px}}
+@media(max-width:560px){.feats,.steps{grid-template-columns:1fr}section{padding:56px 0}.stats{padding:30px 20px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.5 8.5 0 1 1 21 11.5z"/></symbol>
+<symbol id="i-qr" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h3M20 17v4"/></symbol>
+<symbol id="i-chef" viewBox="0 0 24 24"><path d="M6 14A4 4 0 1 1 8 6.2a4 4 0 0 1 8 0A4 4 0 1 1 18 14v6H6zM6 17h12"/></symbol>
+<symbol id="i-bill" viewBox="0 0 24 24"><path d="M5 3h14v18l-3-2-2 2-2-2-2 2-2-2-3 2zM9 8h6M9 12h6"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10 21a2 2 0 0 0 4 0"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></symbol>
+<symbol id="i-utensils" viewBox="0 0 24 24"><path d="M7 3v8a2 2 0 0 0 4 0V3M9 3v18M17 3c-2 2-3 5-3 8h3v10"/></symbol>
+<symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 10h2a2 2 0 0 1 0 4h-2M7 3v2M11 3v2"/></symbol>
+<symbol id="i-wine" viewBox="0 0 24 24"><path d="M8 3h8l-1 7a3 3 0 0 1-6 0zM12 13v8M8 21h8"/></symbol>
+<symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></symbol>
+<symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.5-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1 0 9z"/></symbol>
+<symbol id="i-hotel" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></symbol>
+</defs></svg>
+<nav><div class="wrap"><a class="logo" href="#top">Pabee<b>.</b></a>
+<div class="links"><a href="#features">Features</a><a href="#how">How it works</a><a href="#for">Who it's for</a><a href="#contact">Contact</a></div>
+<a class="btn" href="#contact">Book a demo</a></div></nav>
+
+<header class="hero" id="top"><div class="wrap grid2">
+<div>
+<span class="pill"><svg class="i"><use href="#i-utensils"/></svg>Built for restaurants, cafés &amp; bars</span>
+<h1>Run your entire restaurant from <em>one smart screen.</em></h1>
+<p class="lead">Orders, kitchen, billing, inventory and payments — all in sync. Pabee helps you serve faster, waste less and grow sales.</p>
+<div class="cta"><a class="btn" href="#contact">Get a free demo →</a><a class="btn ghost" href="tel:+917499117133"><svg class="i"><use href="#i-phone"/></svg>+91 7499 117 133</a></div>
+<div class="trust"><span>Setup in days</span><span>UPI &amp; card payments</span><span>Works on any device</span></div>
+</div>
+<div style="position:relative">
+<div class="mock" aria-hidden="true">
+<div class="bar"><i></i><i></i><i></i></div>
+<div class="kpis"><div class="kpi"><small>Today's sales</small><b>₹48,250</b></div><div class="kpi"><small>Live orders</small><b>23</b></div><div class="kpi"><small>vs yesterday</small><b class="up">+18%</b></div></div>
+<div class="chart"><svg viewBox="0 0 300 90" width="100%" role="img" aria-label="Sales trend"><defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#e11d2e" stop-opacity=".35"/><stop offset="1" stop-color="#e11d2e" stop-opacity="0"/></linearGradient></defs><path d="M0 70 C30 60 50 75 80 50 S130 55 160 35 S220 45 250 20 L300 12 V90 H0Z" fill="url(#g)"/><path d="M0 70 C30 60 50 75 80 50 S130 55 160 35 S220 45 250 20 L300 12" fill="none" stroke="#e11d2e" stroke-width="3" stroke-linecap="round"/></svg></div>
+<div class="tickets"><div class="tk n"><b>Table 5 · New</b>2× Paneer Tikka</div><div class="tk"><b>Table 2 · Cooking</b>Veg Biryani</div><div class="tk"><b>Bar · Ready</b>Mojito ×3</div></div>
+</div>
+<div class="chip c1"><svg class="i"><use href="#i-bell"/></svg>Order sent to kitchen</div><div class="chip c2"><svg class="i"><use href="#i-check"/></svg>Paid via UPI</div>
+</div>
+</div></header>
+
+<section id="features"><div class="wrap">
+<div class="rv"><span class="eyebrow">Features</span><h2>Everything your floor needs.<br>Nothing it doesn't.</h2><p class="sub">One platform that replaces notebooks, scattered apps and guesswork.</p></div>
+<div class="feats">
+<div class="f rv"><div class="ic"><svg class="i"><use href="#i-qr"/></svg></div><h3>QR &amp; table ordering</h3><p>Guests scan, browse the menu and order. Fewer errors, faster turns.</p></div>
+<div class="f rv"><div class="ic"><svg class="i"><use href="#i-chef"/></svg></div><h3>Kitchen display</h3><p>Orders land instantly on the kitchen and bar screens with live status.</p></div>
+<div class="f rv"><div class="ic"><svg class="i"><use href="#i-bill"/></svg></div><h3>Smart billing</h3><p>GST-ready bills, split payments, discounts and happy-hour pricing.</p></div>
+<div class="f rv"><div class="ic"><svg class="i"><use href="#i-card"/></svg></div><h3>Online payments</h3><p>UPI, cards and wallets at the table, with automatic reconciliation.</p></div>
+<div class="f rv"><div class="ic"><svg class="i"><use href="#i-box"/></svg></div><h3>Inventory control</h3><p>Track stock and low-stock alerts for kitchen and bar, so nothing runs out.</p></div>
+<div class="f rv"><div class="ic"><svg class="i"><use href="#i-chart"/></svg></div><h3>Reports &amp; insights</h3><p>Best sellers, peak hours and outlet-wise sales in one clean dashboard.</p></div>
+</div></div></section>
+
+<section class="alt" id="how"><div class="wrap">
+<div class="rv"><span class="eyebrow">How it works</span><h2>Live in four simple steps</h2></div>
+<div class="steps">
+<div class="st rv"><h3>Share your menu</h3><p>We set up your items, prices and tables.</p></div>
+<div class="st rv"><h3>Guests order</h3><p>Via QR code or your waiters' devices.</p></div>
+<div class="st rv"><h3>Kitchen delivers</h3><p>Real-time tickets for kitchen and bar.</p></div>
+<div class="st rv"><h3>Bill &amp; grow</h3><p>Instant billing and reports to guide decisions.</p></div>
+</div>
+<div class="stats rv" style="margin-top:44px"><div><b>2×</b><span>faster order flow</span></div><div><b>0</b><span>missed orders</span></div><div><b>1</b><span>dashboard for all outlets</span></div><div><b>24/7</b><span>support on call</span></div></div>
+</div></section>
+
+<section id="for"><div class="wrap">
+<div class="rv"><span class="eyebrow">Who it's for</span><h2>Made for every kind of hospitality business</h2></div>
+<div class="seg rv"><span><svg class="i"><use href="#i-utensils"/></svg>Restaurants</span><span><svg class="i"><use href="#i-cup"/></svg>Cafés</span><span><svg class="i"><use href="#i-wine"/></svg>Bars &amp; lounges</span><span><svg class="i"><use href="#i-music"/></svg>Clubs</span><span><svg class="i"><use href="#i-cloud"/></svg>Cloud kitchens</span><span><svg class="i"><use href="#i-hotel"/></svg>Hotels</span></div>
+</div></section>
+
+<section class="alt" id="contact"><div class="wrap contact">
+<div class="rv">
+<span class="eyebrow">Contact us</span><h2>Let's get your restaurant on Pabee</h2>
+<p class="sub">Tell us about your business and we'll call you back with a free demo.</p>
+<div class="card" style="margin-top:26px">
+<div class="person"><div class="av">GK</div><div><b style="font-size:18px">Gaurav Karmenge</b><br><span class="note">Pabee · Sales &amp; Onboarding</span></div></div>
+<a class="phone" href="tel:+917499117133">+91 7499 117 133</a>
+<div class="cta" style="margin-top:20px"><a class="btn" href="tel:+917499117133"><svg class="i"><use href="#i-phone"/></svg>Call now</a><a class="btn ghost" href="https://wa.me/917499117133?text=Hi%20Gaurav%2C%20I%27d%20like%20a%20Pabee%20demo" target="_blank" rel="noopener"><svg class="i"><use href="#i-chat"/></svg>WhatsApp</a></div>
+</div></div>
+<div class="card rv">
+<form id="lead">
+<input name="name" placeholder="Your name" required autocomplete="name">
+<input name="phone" type="tel" placeholder="Phone number" required autocomplete="tel">
+<input name="biz" placeholder="Restaurant / business name">
+<select name="type"><option>Restaurant</option><option>Café</option><option>Bar / Lounge</option><option>Club</option><option>Cloud kitchen</option><option>Other</option></select>
+<textarea name="msg" rows="3" placeholder="Anything you'd like us to know? (optional)"></textarea>
+<button class="btn" type="submit" style="justify-content:center">Request free demo →</button>
+<p class="note" id="ok">Submitting opens WhatsApp with your details for Gaurav.</p>
+</form></div>
+</div></section>
+
+<footer><div class="wrap"><span><b style="color:var(--ink)">Pabee</b> — All-in-One Restaurant &amp; Bar Management</span><span>Gaurav Karmenge · +91 7499 117 133</span></div></footer>
+<a class="wa" href="https://wa.me/917499117133" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="i"><use href="#i-chat"/></svg></a>
+
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.getElementById('lead').addEventListener('submit',e=>{
+e.preventDefault();const d=new FormData(e.target);
+const t='Hi Gaurav, I\u2019d like a Pabee demo.\nName: '+d.get('name')+'\nPhone: '+d.get('phone')+'\nBusiness: '+(d.get('biz')||'-')+' ('+d.get('type')+')\n'+(d.get('msg')||'');
+window.open('https://wa.me/917499117133?text='+encodeURIComponent(t),'_blank','noopener');
+document.getElementById('ok').textContent='Thanks! We\u2019ll call you shortly.';
+});
+</script>
+</body>
+</html>
